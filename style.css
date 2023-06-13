@@ -1,0 +1,135 @@
+
+:root {
+    --clr-primary-red: hsl(0, 100%, 74%);
+    --clr-primary-green: hsl(154, 59%, 51%);
+
+    --clr-accent: hsl(248, 32%, 49%);
+
+    --clr-neutral-dark-blue: hsl(249, 10%, 26%);
+    --clr-neutral-grayish-blue: hsl(246, 25%, 77%);
+
+
+}
+
+/* reset  */
+ 
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* my styles */
+
+  body {
+    background-color: var(--clr-primary-red);
+    background-image: url(./images/bg-intro-desktop.png); 
+    font-family: 'Poppins', sans-serif;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  p {
+    color: white;
+  }
+
+  form {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  input {
+    width: 80%;
+    padding: 1.2em;
+    margin-top: 1em;
+    margin-right: 3em;
+    margin-left: 3em;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  input:focus-within:not(.button) {
+    border: 3px solid var(--clr-accent);
+  }
+
+  .button {
+    background-color: var(--clr-primary-green);
+    box-shadow: 0px 4px 0px  hsla(154, 59%, 51%, 0.5);
+    border-style: none;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+  }
+  .button:hover {
+    background-color:  hsl(154, 72%, 43%);
+  }
+
+  .bold-heading {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .heading-container {
+    width: 50%;
+    padding: 6em;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .form-container {
+    width: 50%;
+    padding: 6em;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  @media (max-width: 375px) {
+    body {
+        background-image: url(./images/bg-intro-mobile.png);
+    }
+  }
+
+  @media (max-width: 900px) {
+    section {
+        flex-direction: column;
+        
+    }
+    .form-container{
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .heading-container{
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+  }
